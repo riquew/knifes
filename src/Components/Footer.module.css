@@ -1,0 +1,40 @@
+.container {
+  background-image: url("../img/bgFooter.jpg");
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: grid;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+ul li {
+  position: relative;
+  margin-left: 10px;
+}
+
+.contato li::before {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  left: -15px;
+  bottom: 5px;
+  background-color: #63462d;
+  transform: rotate(45deg);
+}
+
+.socialMedias {
+  display: flex;
+}
+
+img {
+  align-self: start;
+}
