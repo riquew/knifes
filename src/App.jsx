@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 import Produtos from "./Components/Produtos/Produtos";
 import Personalizar from "./Components/Personalizar/Personalizar";
 import Contato from "./Components/Contato/Contato";
