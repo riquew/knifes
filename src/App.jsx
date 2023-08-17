@@ -8,6 +8,7 @@ import Produtos from "./Components/Produtos/Produtos";
 import Personalizar from "./Components/Personalizar/Personalizar";
 import Contato from "./Components/Contato/Contato";
 import Login from "./Components/Login/Login";
+import Admin from "./Components/Admin/Admin";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/personalizar" element={<Personalizar />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
         <Footer />
       </BrowserRouter>
