@@ -3,6 +3,7 @@ const cors = require("cors");
 const mysql = require("mysql2");
 const path = require("path");
 const app = express();
+const router = express.Router();
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -15,16 +16,15 @@ const connection = mysql.createConnection({
 // connection.query(
 //   "INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES ('NOME', 'imagem', 10, 5.20, 'descricao do produto')"
 // );
-app.use(express.static(path.join(__dirname, "client/build")));
 
-app.get("/api/getList", (req, res) => {
-  var list = ["item1", "item2", "item3"];
-  res.json(list);
-  console.log("Sent list of items");
+app.use(cors());
+
+app.get("/teste", (req, res) => {
+  res.json({ funciona: "sim" });
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+app.post("/admin", (req, res) => {
+  console.log(res);
 });
 
 const port = process.env.PORT || 5000;

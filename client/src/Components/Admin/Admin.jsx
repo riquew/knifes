@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Admin.module.css";
+import api from "../../Api";
 
 const Admin = () => {
   const [form, setForm] = React.useState({
@@ -10,9 +11,26 @@ const Admin = () => {
     descricao: "",
   });
 
+  const [loading, setLoading] = React.useState(false);
+
+  const [textoButton, setTextoButton] = React.useState("Enviar");
+
+  // React.useEffect(() => {
+  //   api.get("teste").then((res) => {
+  //     setBackEndData(res.data);
+  //   });
+  // }, []);
+
   function handleSubmit(event) {
-    event.preventDefault();
-    console.log(form);
+    setLoading(true);
+    setTextoButton("Carregando...");
+    const sql = `INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES (${
+      form.nome
+    }, ${form.imagem}, ${+form.quantidade}, ${+form.preco}, ${form.descricao})`;
+    api.post("admin", sql).then((response) => console.log(response.status));
+    setTextoButton("Enviado!");
+    console.log(sql);
+    setLoading(false);
   }
 
   function handleChange({ target }) {
@@ -64,7 +82,7 @@ const Admin = () => {
           value={form.descricao || ""}
           onChange={handleChange}
         ></textarea>
-        <button>Enviar</button>
+        <button>{textoButton}</button>
       </form>
     </div>
   );

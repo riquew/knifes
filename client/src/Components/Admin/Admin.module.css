@@ -16,13 +16,13 @@ textarea {
   background-color: #dedede;
   font-size: 20px;
   outline: none;
-  border: 2px solid black;
+  border: 2px solid #333;
 }
 
 input:focus,
 textarea:focus {
   background-color: white;
-  border: 2px solid #895b34;
+  border-color: #895b34;
 }
 
 textarea {
