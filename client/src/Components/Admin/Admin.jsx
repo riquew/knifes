@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Admin.module.css";
-import api from "../../Api";
+import Api from "../../Api";
+import axios from "axios";
 
 const Admin = () => {
   const [form, setForm] = React.useState({
@@ -21,17 +22,29 @@ const Admin = () => {
   //   });
   // }, []);
 
-  function handleSubmit(event) {
-    setLoading(true);
-    setTextoButton("Carregando...");
-    const sql = `INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES (${
-      form.nome
-    }, ${form.imagem}, ${+form.quantidade}, ${+form.preco}, ${form.descricao})`;
-    api.post("admin", sql).then((response) => console.log(response.status));
-    setTextoButton("Enviado!");
-    console.log(sql);
-    setLoading(false);
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   // setLoading(true);
+  //   // setTextoButton("Carregando...");
+  //   const sql = {
+  //     sql: `INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES (${
+  //       form.nome
+  //     }, ${form.imagem}, ${+form.quantidade}, ${+form.preco}, ${
+  //       form.descricao
+  //     })`,
+  //   };
+
+  //   const teste = {
+  //     teste: "teste",
+  //   };
+
+  //   fetch("/admin", {
+  //     method: "post",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(sql),
+  //   }).then((response) => console.log(response));
+  //   // setLoading(false);
+  // }
 
   function handleChange({ target }) {
     const { id, value } = target;
@@ -41,7 +54,7 @@ const Admin = () => {
   return (
     <div className="container">
       <h1>Cadastrar Produto</h1>
-      <form className="formAdmin" onSubmit={handleSubmit}>
+      <form className="formAdmin">
         <label htmlFor="nome">Nome do Produto:</label>
         <input
           type="text"
