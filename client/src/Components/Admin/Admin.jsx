@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Admin.module.css";
 import Api from "../../Api";
-import axios from "axios";
 
 const Admin = () => {
   const [form, setForm] = React.useState({
@@ -13,38 +12,31 @@ const Admin = () => {
   });
 
   const [loading, setLoading] = React.useState(false);
-
+  // const [backEndData, setBackEndData] = React.useState();
   const [textoButton, setTextoButton] = React.useState("Enviar");
 
   // React.useEffect(() => {
-  //   api.get("teste").then((res) => {
+  //   Api.get("teste").then((res) => {
   //     setBackEndData(res.data);
   //   });
   // }, []);
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   // setLoading(true);
-  //   // setTextoButton("Carregando...");
-  //   const sql = {
-  //     sql: `INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES (${
-  //       form.nome
-  //     }, ${form.imagem}, ${+form.quantidade}, ${+form.preco}, ${
-  //       form.descricao
-  //     })`,
-  //   };
+  function makeQuery() {
+    const query = {
+      sql: `INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES ("${
+        form.nome
+      }", "${form.imagem}", ${+form.quantidade}, ${+form.preco}, "${
+        form.descricao
+      }")`,
+    };
+    return query;
+  }
 
-  //   const teste = {
-  //     teste: "teste",
-  //   };
-
-  //   fetch("/admin", {
-  //     method: "post",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(sql),
-  //   }).then((response) => console.log(response));
-  //   // setLoading(false);
-  // }
+  function handleSubmit(event) {
+    event.preventDefault();
+    const sql = makeQuery();
+    Api.post("admin", sql).then((response) => console.log(response.status));
+  }
 
   function handleChange({ target }) {
     const { id, value } = target;
@@ -54,7 +46,7 @@ const Admin = () => {
   return (
     <div className="container">
       <h1>Cadastrar Produto</h1>
-      <form className="formAdmin">
+      <form className="formAdmin" onSubmit={handleSubmit}>
         <label htmlFor="nome">Nome do Produto:</label>
         <input
           type="text"
