@@ -12,14 +12,7 @@ const Admin = () => {
   });
 
   const [loading, setLoading] = React.useState(false);
-  // const [backEndData, setBackEndData] = React.useState();
   const [textoButton, setTextoButton] = React.useState("Enviar");
-
-  // React.useEffect(() => {
-  //   Api.get("teste").then((res) => {
-  //     setBackEndData(res.data);
-  //   });
-  // }, []);
 
   function makeQuery() {
     const query = {

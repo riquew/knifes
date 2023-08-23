@@ -20,14 +20,28 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/teste", (req, res) => {
-  res.json({ funciona: "ta foda" });
+app.get("/produtos", (req, res) => {
+  connection.connect(function (error) {
+    if (error) throw error;
+    else
+      connection.query(
+        "SELECT * FROM PRODUTOS",
+        function (error, result, fields) {
+          if (error) throw error;
+          const data = Object.values(result);
+          console.log(data);
+        }
+      );
+  });
+  console.log("servidor");
+  res.json(data);
 });
 
 app.post("/admin", (req, res) => {
   let query = req.body.sql;
   console.log(query);
   connection.query(query);
+  connection.end();
 });
 
 const port = process.env.PORT || 5000;
