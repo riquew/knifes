@@ -3,16 +3,16 @@ import Api from "../../Api";
 import Produto from "./Produto/Produto";
 
 const Produtos = () => {
-  const [produtos, setProdutos] = React.useState();
-  const [loading, setLoading] = React.useState();
+  const [produtos, setProdutos] = React.useState(null);
+  const [loading, setLoading] = React.useState(null);
 
   React.useEffect(() => {
     setLoading(true);
     function getProdutos() {
       Api.get("produtos").then((response) => setProdutos(response.data));
-      setLoading(false);
     }
     getProdutos();
+    setLoading(false);
   }, []);
 
   return (
@@ -22,10 +22,10 @@ const Produtos = () => {
         <ul>
           {produtos.map((produto) => {
             return (
-              <li key={produto.PRODUTOID}>
+              <li key={produto.ID}>
                 <Produto
-                  id={produto.PRODUTOID}
-                  nome={produto.NOMEPRODUTO}
+                  id={produto.ID}
+                  nome={produto.NOME}
                   imagem={produto.IMAGEM}
                   quantidade={produto.QUANTIDADE}
                   preco={produto.PRECO}

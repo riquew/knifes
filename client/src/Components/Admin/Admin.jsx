@@ -16,7 +16,7 @@ const Admin = () => {
 
   function makeQuery() {
     const query = {
-      sql: `INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES ("${
+      sql: `INSERT INTO PRODUTOS (NOME, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES ("${
         form.nome
       }", "${form.imagem}", ${+form.quantidade}, ${+form.preco}, "${
         form.descricao

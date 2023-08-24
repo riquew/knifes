@@ -11,11 +11,6 @@ const connection = mysql.createConnection({
   port: "3306",
 });
 
-// connection.query(
-//   "INSERT INTO PRODUTOS (NOMEPRODUTO, IMAGEM, QUANTIDADE, PRECO, DESCRICAO) VALUES ('NOME', 'imagem', 10, 5.20, 'descricao do produto')"
-
-// );
-
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,7 +28,6 @@ app.get("/produtos", (req, res) => {
         }
       );
   });
-  console.log("servidor");
 });
 
 app.post("/admin", (req, res) => {
