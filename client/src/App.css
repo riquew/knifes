@@ -46,7 +46,10 @@ a {
 }
 
 h1 {
-  margin-bottom: 28px;
   font-size: 40px;
   color: #f7f7f7;
+}
+
+.titulo {
+  margin-bottom: 28px;
 }

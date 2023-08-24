@@ -1,0 +1,19 @@
+.slide {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 900px;
+  background: url(../../../img/slide/slide13.jpg);
+  background-size: cover;
+  color: #fff;
+}
+
+.slideTexto {
+  height: 360px;
+  display: grid;
+  gap: 10px;
+  text-align: end;
+}
+
+.slideTexto h1 {
+  align-self: end;
+}

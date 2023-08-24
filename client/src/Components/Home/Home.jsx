@@ -1,7 +1,8 @@
 import React from "react";
+import Slide from "./HomeComponents/Slide";
 
 const Home = () => {
-  return <div className="container">Home</div>;
+  return <Slide />;
 };
 
 export default Home;
