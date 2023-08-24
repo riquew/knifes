@@ -7,7 +7,7 @@
   justify-content: space-between;
   color: #fff;
   max-width: 1200px;
-  height: 72px;
+  padding: 10px 20px;
   margin: 0 auto;
   box-sizing: border-box;
   align-items: center;
@@ -25,9 +25,13 @@
   font-size: 20px;
 }
 
-.nav {
+.nav ul {
   display: flex;
   gap: 20px;
   color: #fff;
   align-items: center;
+}
+
+.nav ul li a {
+  padding: 16px 0;
 }

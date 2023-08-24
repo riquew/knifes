@@ -15,13 +15,25 @@ const Header = () => {
           </p>
         </div>
         <nav className={styles.nav}>
-          <Link to="/">Home</Link>
-          <Link to="/produtos">Produtos</Link>
-          <Link to="/personalizar">Personalizar</Link>
-          <Link to="/contato">Contato</Link>
-          <Link to="/login">
-            <img src={login} alt="" />
-          </Link>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/produtos">Produtos</Link>
+            </li>
+            <li>
+              <Link to="/personalizar">Personalizar</Link>
+            </li>
+            <li>
+              <Link to="/contato">Contato</Link>
+            </li>
+            <li>
+              <Link to="/login">
+                <img src={login} alt="" />
+              </Link>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>

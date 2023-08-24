@@ -9,13 +9,13 @@
   align-items: center;
 }
 
-ul {
+.contato {
   display: grid;
   gap: 20px;
   padding-bottom: 40px;
 }
 
-ul li {
+.contato li {
   position: relative;
   margin-left: 10px;
 }
@@ -33,8 +33,10 @@ ul li {
 
 .socialMedias {
   display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
 }
 
-img {
+.content img {
   align-self: start;
 }
