@@ -1,6 +1,7 @@
 import React from "react";
 import Api from "../../Api";
-import Produto from "./Produto/Produto";
+import ProdutoCard from "./ProdutoCard/ProdutoCard";
+import styles from "./Produtos.module.css";
 
 const Produtos = () => {
   const [produtos, setProdutos] = React.useState(null);
@@ -16,14 +17,14 @@ const Produtos = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container ">
       {loading && <span>Carregando...</span>}
       {!loading && produtos && (
-        <ul>
+        <ul className={styles.produto}>
           {produtos.map((produto) => {
             return (
               <li key={produto.ID}>
-                <Produto
+                <ProdutoCard
                   id={produto.ID}
                   nome={produto.NOME}
                   imagem={produto.IMAGEM}

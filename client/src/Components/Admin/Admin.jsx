@@ -61,7 +61,7 @@ const Admin = () => {
           type="number"
           id="quantidade"
           min="1"
-          value={form.quantidade || 1}
+          value={form.quantidade || ""}
           onChange={handleChange}
         />
         <label htmlFor="preco">Preco do Produto:</label>
@@ -80,7 +80,7 @@ const Admin = () => {
           value={form.descricao || ""}
           onChange={handleChange}
         ></textarea>
-        <button>{textoButton}</button>
+        <button className={styles.botaoInsereProduto}>{textoButton}</button>
       </form>
     </div>
   );
