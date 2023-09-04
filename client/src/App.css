@@ -8,6 +8,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@font-face {
+  font-family: "Skorzhen";
+  src: local("Skorzhen") url("./fonts/FTY\ SKORZHEN\ NCV.ttf")
+    format("truetype");
+}
+
 h1,
 h2,
 h3,
