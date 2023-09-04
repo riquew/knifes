@@ -1,16 +1,10 @@
-/* .slide {
-  margin-bottom: 900px;
-  background: url(../../../img/slide/slide0.jpg);
-  background-size: cover;
-  color: #fff;
-} */
-
 .slideTexto {
   height: 360px;
   display: grid;
   gap: 10px;
   text-align: end;
   padding-right: 60px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .slideTexto h1 {
@@ -26,7 +20,6 @@
 }
 
 .arrowButton {
-  /* border-radius: 50%; */
   width: 50px;
   height: 50px;
   border: 1px solid #000;
