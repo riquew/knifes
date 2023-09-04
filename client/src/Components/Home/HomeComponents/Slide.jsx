@@ -46,6 +46,7 @@ const Slide = () => {
   };
 
   function changeSlide(action) {
+    clearTimeout(startSlide);
     if (textoSlide.index === 2 && action === "forward") {
       setTextoSlide(listaTexto[0]);
       setImgBg(listaTexto[0].foto);
@@ -84,6 +85,8 @@ const Slide = () => {
   function goForward() {
     changeSlide("forward");
   }
+
+  const startSlide = setTimeout(goForward, 3000);
 
   return (
     <div style={styleSlide} ref={slide}>
