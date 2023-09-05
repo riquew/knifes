@@ -10,7 +10,7 @@ body {
 
 @font-face {
   font-family: Skorzhen;
-  src: url("../public/fonts/FTY\ SKORZHEN\ NCV.ttf");
+  src: url("../fonts/FTY\ SKORZHEN\ NCV.ttf");
 }
 
 h1,
@@ -58,4 +58,12 @@ h1 {
 
 .titulo {
   margin-bottom: 28px;
+}
+
+.titulo-container {
+  font-size: 40px;
+  color: #f7f7f7;
+  font-family: Skorzhen;
+  margin-bottom: 40px;
+  letter-spacing: 0.125rem;
 }

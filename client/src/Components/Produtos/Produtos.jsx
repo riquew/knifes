@@ -18,6 +18,7 @@ const Produtos = () => {
 
   return (
     <div className="container ">
+      <h1 className="titulo-container">Nossos Produtos</h1>
       {loading && <span>Carregando...</span>}
       {!loading && produtos && (
         <ul className={styles.produto}>

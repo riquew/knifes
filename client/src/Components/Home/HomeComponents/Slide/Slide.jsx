@@ -1,7 +1,7 @@
 import React from "react";
-import foto0 from "../../../img/slide/slide0.jpg";
-import foto1 from "../../../img/slide/slide1.jpg";
-import foto2 from "../../../img/slide/slide2.jpg";
+import slide0 from "../../../../img/slide/slide0.jpg";
+import slide1 from "../../../../img/slide/slide1.jpg";
+import slide2 from "../../../../img/slide/slide2.jpg";
 import styles from "./Slide.module.css";
 
 const Slide = () => {
@@ -15,30 +15,29 @@ const Slide = () => {
       index: 0,
       titulo: "AFIADA",
       subTitulo: "A afiação que você precisa.",
-      foto: foto0,
+      slide: slide0,
       square: square0,
     },
     {
       index: 1,
       titulo: "PRECISA",
       subTitulo: "A precisão necessária para as tarefas diárias.",
-      foto: foto1,
+      slide: slide1,
       square: square1,
     },
     {
       index: 2,
       titulo: "CORTANTE",
       subTitulo: "O melhor corte do país.",
-      foto: foto2,
+      slide: slide2,
       square: square2,
     },
   ];
 
   const [textoSlide, setTextoSlide] = React.useState(listaTexto[0]);
-  const [imgBg, setImgBg] = React.useState(listaTexto[0].foto);
+  const [imgBg, setImgBg] = React.useState(listaTexto[0].slide);
 
   let styleSlide = {
-    marginBottom: `200px`,
     backgroundImage: `url(${imgBg})`,
     backgroundSize: `cover`,
     color: `#fff`,
@@ -49,17 +48,17 @@ const Slide = () => {
     clearTimeout(startSlide);
     if (textoSlide.index === 2 && action === "forward") {
       setTextoSlide(listaTexto[0]);
-      setImgBg(listaTexto[0].foto);
+      setImgBg(listaTexto[0].slide);
       listaTexto[2].square.current.classList.remove(`${styles.active}`);
       listaTexto[0].square.current.classList.add(`${styles.active}`);
     } else if (textoSlide.index === 0 && action === "back") {
       setTextoSlide(listaTexto[2]);
-      setImgBg(listaTexto[2].foto);
+      setImgBg(listaTexto[2].slide);
       listaTexto[0].square.current.classList.remove(`${styles.active}`);
       listaTexto[2].square.current.classList.add(`${styles.active}`);
     } else if (action === "forward") {
       setTextoSlide(listaTexto[textoSlide.index + 1]);
-      setImgBg(listaTexto[textoSlide.index + 1].foto);
+      setImgBg(listaTexto[textoSlide.index + 1].slide);
       listaTexto[textoSlide.index].square.current.classList.remove(
         `${styles.active}`
       );
@@ -68,7 +67,7 @@ const Slide = () => {
       );
     } else {
       setTextoSlide(listaTexto[textoSlide.index - 1]);
-      setImgBg(listaTexto[textoSlide.index - 1].foto);
+      setImgBg(listaTexto[textoSlide.index - 1].slide);
       listaTexto[textoSlide.index].square.current.classList.remove(
         `${styles.active}`
       );

@@ -1,8 +1,14 @@
 import React from "react";
-import Slide from "./HomeComponents/Slide";
+import Slide from "./HomeComponents/Slide/Slide";
+import Destaques from "./HomeComponents/Destaques/Destaques";
 
 const Home = () => {
-  return <Slide />;
+  return (
+    <>
+      <Slide />;
+      <Destaques />
+    </>
+  );
 };
 
 export default Home;
