@@ -9,9 +9,8 @@ body {
 }
 
 @font-face {
-  font-family: "Skorzhen";
-  src: local("Skorzhen") url("./fonts/FTY\ SKORZHEN\ NCV.ttf")
-    format("truetype");
+  font-family: Skorzhen;
+  src: url("../public/fonts/FTY\ SKORZHEN\ NCV.ttf");
 }
 
 h1,
