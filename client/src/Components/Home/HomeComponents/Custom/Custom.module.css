@@ -1,0 +1,21 @@
+.customConteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.customLista {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+}
+
+.customLista li {
+  display: grid;
+  justify-content: end;
+  align-items: top;
+}
+
+.customLista li img {
+  height: 100%;
+}
