@@ -1,0 +1,13 @@
+.painelConteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 80px;
+}
+
+.painelTextoContainer {
+  background-color: black;
+}
+
+.painelConteudo img {
+  width: 100%;
+}
