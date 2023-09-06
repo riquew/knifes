@@ -7,8 +7,18 @@
 
 .destaque li {
   cursor: pointer;
+  overflow: hidden;
+}
+
+.destaque li:hover {
+  outline: 2px solid #ccc;
 }
 
 .destaque li img {
-  transition: all 0.5s ease-out 0.3s;
+  transition: all 0.4s;
+}
+
+.destaque li:hover img {
+  transform: scale(1.5);
+  transform-origin: 50% 50%;
 }

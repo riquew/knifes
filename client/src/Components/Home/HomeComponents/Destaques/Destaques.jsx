@@ -8,16 +8,16 @@ import destaque3 from "../../../../img/destaques/destaque3.jpg";
 const Destaques = () => {
   const listaDestaque = [destaque0, destaque1, destaque2, destaque3];
 
-  function changeDestaque(event) {
-    let img = event.target.src;
-    if (img.includes("zoom")) {
-      let newImg = img.replace("zoom.jpg", ".jpg");
-      event.target.src = newImg;
-    } else {
-      let newImg = img.replace(".jpg", "zoom.jpg");
-      event.target.src = newImg;
-    }
-  }
+  // function changeDestaque(event) {
+  //   let img = event.target.src;
+  //   if (img.includes("zoom")) {
+  //     let newImg = img.replace("zoom.jpg", ".jpg");
+  //     event.target.src = newImg;
+  //   } else {
+  //     let newImg = img.replace(".jpg", "zoom.jpg");
+  //     event.target.src = newImg;
+  //   }
+  // }
 
   return (
     <div className="container">
@@ -29,8 +29,8 @@ const Destaques = () => {
               <img
                 src={destaque}
                 alt=""
-                onMouseEnter={changeDestaque}
-                onMouseLeave={changeDestaque}
+                // onMouseEnter={changeDestaque}
+                // onMouseLeave={changeDestaque}
                 height={"400px"}
                 width={"600px"}
               />
