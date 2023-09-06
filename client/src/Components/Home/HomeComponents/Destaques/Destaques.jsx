@@ -26,14 +26,7 @@ const Destaques = () => {
         {listaDestaque.map((destaque) => {
           return (
             <li key={listaDestaque.indexOf(destaque)}>
-              <img
-                src={destaque}
-                alt=""
-                // onMouseEnter={changeDestaque}
-                // onMouseLeave={changeDestaque}
-                height={"400px"}
-                width={"600px"}
-              />
+              <img src={destaque} alt="" height={"400px"} width={"600px"} />
             </li>
           );
         })}
