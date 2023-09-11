@@ -30,6 +30,21 @@ app.get("/produtos", (req, res) => {
   });
 });
 
+app.get("/produtos/:id", (req, res) => {
+  connection.connect(function (error) {
+    if (error) throw error;
+    else
+      connection.query(
+        `SELECT * FROM PRODUTOS WHERE ID=${req.params.id}`,
+        function (error, result, fields) {
+          if (error) throw error;
+          const data = Object.values(result);
+          res.json(data);
+        }
+      );
+  });
+});
+
 app.post("/admin", (req, res) => {
   let query = req.body.sql;
   console.log(query);
