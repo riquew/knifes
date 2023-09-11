@@ -12,12 +12,41 @@
   padding: 16px 8px;
   display: grid;
   gap: 20px;
+  padding-bottom: 20px;
+}
+
+.cardDecorador {
+  height: 1px;
+  background-color: #595959;
+  border-radius: 2px;
+}
+
+.precoPix {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.precoPix span {
+  font-size: 12px;
+}
+
+.precoParcelado {
+  font-size: 14px;
 }
 
 .botaoComprar {
-  padding: 8px 16px;
+  padding: 16px 32px;
   margin: 10px 20px;
   font-weight: bold;
   background-color: #fff;
   cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.4s;
+  letter-spacing: 0.05rem;
+}
+
+.botaoComprar:hover {
+  background-color: #000;
+  color: white;
+  outline: 2px solid #ccc;
 }

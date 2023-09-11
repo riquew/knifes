@@ -14,21 +14,21 @@ const Slide = () => {
     {
       index: 0,
       titulo: "AFIADA",
-      subTitulo: "A afiação que você precisa.",
+      subTitulo: "A afiação que você precisa",
       slide: slide0,
       square: square0,
     },
     {
       index: 1,
       titulo: "PRECISA",
-      subTitulo: "A precisão necessária para as tarefas diárias.",
+      subTitulo: "A precisão necessária para as tarefas diárias",
       slide: slide1,
       square: square1,
     },
     {
       index: 2,
       titulo: "CORTANTE",
-      subTitulo: "O melhor corte do país.",
+      subTitulo: "O melhor corte do país",
       slide: slide2,
       square: square2,
     },
@@ -91,7 +91,7 @@ const Slide = () => {
     <div style={styleSlide} ref={slide}>
       <div className={"container"}>
         <div className={styles.slideTexto}>
-          <h1>{textoSlide.titulo}</h1>
+          <h1>{textoSlide.titulo}.</h1>
           <h3>{textoSlide.subTitulo}</h3>
         </div>
         <div className={styles.slideButtons}>

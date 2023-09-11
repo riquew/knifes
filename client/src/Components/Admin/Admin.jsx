@@ -38,7 +38,7 @@ const Admin = () => {
 
   return (
     <div className={"container"}>
-      <h1 className="titulo">Cadastrar Produto</h1>
+      <h1 className="titulo-container">Cadastrar Produto</h1>
       <form className="formAdmin" onSubmit={handleSubmit}>
         <label htmlFor="nome">Nome do Produto:</label>
         <input

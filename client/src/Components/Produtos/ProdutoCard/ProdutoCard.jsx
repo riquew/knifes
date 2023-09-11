@@ -2,6 +2,14 @@ import React from "react";
 import styles from "./ProdutoCard.module.css";
 
 const ProdutoCard = ({ id, nome, imagem, quantidade, preco, descricao }) => {
+  function editaPreco(preco) {
+    const precoEditado = preco.toFixed(2).toString().replace(".", ",");
+    return precoEditado;
+  }
+
+  const precoEditado = preco.toString().replace(".", ",");
+  const precoPix = editaPreco(preco * 0.9);
+  const precoParcelado = editaPreco(preco / 10);
   return (
     <div className={styles.card}>
       <div className={styles.cardImagem}>
@@ -9,9 +17,14 @@ const ProdutoCard = ({ id, nome, imagem, quantidade, preco, descricao }) => {
       </div>
       <div className={styles.cardTexto}>
         <h3>{nome}</h3>
-        <p>R$ {preco}</p>
-        <p>10X R$ {preco / 10} sem juros</p>
-        <button className={styles.botaoComprar}>COMPRAR</button>
+        <div className={styles.cardDecorador}></div>
+        <p className={styles.precoPix}>
+          R$ {precoPix} <span>no PIX</span>
+        </p>
+        <p className={styles.precoParcelado}>
+          ou R$ {precoEditado} em 10x R$ {precoParcelado}
+        </p>
+        {/* <button className={styles.botaoComprar}>COMPRAR</button> */}
       </div>
     </div>
   );

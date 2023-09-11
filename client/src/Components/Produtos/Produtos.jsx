@@ -1,19 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Api from "../../Api";
 import ProdutoCard from "./ProdutoCard/ProdutoCard";
 import styles from "./Produtos.module.css";
 
 const Produtos = () => {
   const [produtos, setProdutos] = React.useState(null);
-  const [loading, setLoading] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
-    setLoading(true);
     function getProdutos() {
       Api.get("produtos").then((response) => setProdutos(response.data));
+      setLoading(false);
     }
     getProdutos();
-    setLoading(false);
   }, []);
 
   return (
@@ -21,18 +22,23 @@ const Produtos = () => {
       <h1 className="titulo-container">Nossos Produtos</h1>
       {loading && <span>Carregando...</span>}
       {!loading && produtos && (
-        <ul className={styles.produto}>
+        <ul className={styles.produtos}>
           {produtos.map((produto) => {
             return (
-              <li key={produto.ID}>
-                <ProdutoCard
-                  id={produto.ID}
-                  nome={produto.NOME}
-                  imagem={produto.IMAGEM}
-                  quantidade={produto.QUANTIDADE}
-                  preco={produto.PRECO}
-                  descricao={produto.DESCRICAO}
-                />
+              <li
+                key={produto.ID}
+                onClick={() => navigate(`/produtos/${produto.ID}`)}
+              >
+                <a href="">
+                  <ProdutoCard
+                    id={produto.ID}
+                    nome={produto.NOME}
+                    imagem={produto.IMAGEM}
+                    quantidade={produto.QUANTIDADE}
+                    preco={produto.PRECO}
+                    descricao={produto.DESCRICAO}
+                  />
+                </a>
               </li>
             );
           })}

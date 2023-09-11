@@ -19,6 +19,7 @@ h3,
 h4,
 p {
   margin: 0;
+  padding: 0;
 }
 
 ul,
@@ -39,6 +40,10 @@ input {
   font-size: 1rem;
 }
 
+button {
+  border: none;
+}
+
 a {
   text-decoration: none;
   color: #fff;
@@ -54,10 +59,7 @@ a {
 h1 {
   font-size: 40px;
   color: #f7f7f7;
-}
-
-.titulo {
-  margin-bottom: 28px;
+  position: relative;
 }
 
 .titulo-container {
@@ -66,4 +68,13 @@ h1 {
   font-family: Skorzhen;
   margin-bottom: 40px;
   letter-spacing: 0.125rem;
+}
+
+.titulo-container::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  background-color: #b2b2b2;
+  bottom: -8px;
 }
