@@ -1,11 +1,17 @@
 .painelConteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 .painelTextoContainer {
   background-color: black;
+  font-size: 280px;
+  color: #f7f7f7;
+  font-family: Skorzhen;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .painelConteudo img {

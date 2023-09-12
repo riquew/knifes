@@ -10,14 +10,14 @@ const Painel = () => {
     <>
       <div className="container">
         <div className={styles.painelConteudo}>
-          <div className={styles.painelTextoContainer}></div>
+          <div className={styles.painelTextoContainer}>DOM</div>
           <img src={painel0} alt="" />
           <img src={painel1} alt="" />
-          <div className={styles.painelTextoContainer}></div>
-          <div className={styles.painelTextoContainer}></div>
+          <div className={styles.painelTextoContainer}>FA</div>
+          <div className={styles.painelTextoContainer}>CO</div>
           <img src={painel2} alt="" />
           <img src={painel3} alt="" />
-          <div className={styles.painelTextoContainer}></div>
+          <div className={styles.painelTextoContainer}>NE</div>
         </div>
       </div>
     </>
