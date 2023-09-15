@@ -17,10 +17,15 @@ const Produtos = () => {
     getProdutos();
   }, []);
 
+  console.log(loading);
+
   return (
     <div className="container ">
       <h1 className="titulo-container">Nossos Produtos</h1>
-      {loading && <span>Carregando...</span>}
+      {loading && <div className={styles.faltaEstoque}>Carregando...</div>}
+      {!loading && produtos && produtos.length === 0 && (
+        <div className={styles.faltaEstoque}>Nenhum produto incluido </div>
+      )}
       {!loading && produtos && (
         <ul className={styles.produtos}>
           {produtos.map((produto) => {
