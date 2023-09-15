@@ -27,8 +27,17 @@ const Admin = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
+    setForm({
+      nome: "",
+      imagem: "",
+      quantidade: 1,
+      preco: "",
+      descricao: "",
+    });
     const sql = makeQuery();
     Api.post("admin", sql).then((response) => console.log(response.status));
+    setTextoButton("Enviado.");
+    setTimeout(() => setTextoButton("Enviar"), 3000);
   }
 
   function handleChange({ target }) {
@@ -37,7 +46,7 @@ const Admin = () => {
   }
 
   return (
-    <div className={"container"}>
+    <div className="container">
       <h1 className="titulo-container">Cadastrar Produto</h1>
       <form className="formAdmin" onSubmit={handleSubmit}>
         <label htmlFor="nome">Nome do Produto:</label>
