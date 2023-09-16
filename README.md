@@ -14,7 +14,7 @@ Projeto de loja virtual de facas, para trabalho de conclusão.
 
 ## Preview
 - AC 1
-![](https://imgur.com/ypPVYne)
+![Imgur Image](https://imgur.com/ypPVYne)
 
 
 ## Figma
