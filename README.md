@@ -13,8 +13,7 @@ Projeto de loja virtual de facas, para trabalho de conclusão.
 - MySql (banco de dados)
 
 ## Preview
-- AC 1
-![Imgur Image](https://imgur.com/ypPVYne)
+- AC 1 - https://imgur.com/ypPVYne
 
 
 ## Figma
