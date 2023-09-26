@@ -35,6 +35,10 @@
   margin-bottom: 12px;
 }
 
+.produtoInfo button {
+  width: 100%;
+}
+
 .cardDecorador {
   height: 1px;
   background-color: #595959;

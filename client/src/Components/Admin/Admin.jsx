@@ -89,7 +89,7 @@ const Admin = () => {
           value={form.descricao || ""}
           onChange={handleChange}
         ></textarea>
-        <button className={styles.botaoInsereProduto}>{textoButton}</button>
+        <button className="botaoAcao">{textoButton}</button>
       </form>
     </div>
   );

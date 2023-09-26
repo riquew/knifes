@@ -9,11 +9,6 @@ const Produto = () => {
   const [loading, setLoading] = React.useState(true);
   const [info, setInfo] = React.useState();
 
-  // function editaPreco(preco) {
-  //   const precoEditado = preco.toFixed(2).toString().replace(".", ",");
-  //   return precoEditado;
-  // }
-
   React.useEffect(() => {
     function getInfo() {
       Api.get(`produtos/${id.id}`).then((response) =>
@@ -61,7 +56,7 @@ const Produto = () => {
               </div>
               <div className={styles.cardDecorador}></div>
               <div>
-                <button>COMPRAR</button>
+                <button className="botaoAcao">COMPRAR</button>
               </div>
             </div>
           </div>

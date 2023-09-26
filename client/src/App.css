@@ -50,6 +50,37 @@ a {
   color: #fff;
 }
 
+form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 72px;
+}
+
+label {
+  font-size: 28px;
+  color: #fff;
+}
+
+input,
+textarea {
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #dedede;
+  font-size: 20px;
+  outline: none;
+  border: 2px solid #333;
+}
+
+input:focus,
+textarea:focus {
+  background-color: white;
+  border-color: #895b34;
+}
+
+textarea {
+  resize: none;
+}
+
 .container {
   max-width: 1200px;
   padding: 40px 20px 0px 20px;
@@ -78,4 +109,22 @@ h1 {
   height: 5px;
   background-color: #b2b2b2;
   bottom: -8px;
+}
+
+.botaoAcao {
+  margin-top: 12px;
+  padding: 16px 32px;
+  width: 20%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s all;
+  letter-spacing: 0.0625em;
+}
+
+.botaoAcao:hover {
+  background-color: black;
+  color: white;
+  outline: 2px solid #ccc;
+  font-size: 20px;
 }

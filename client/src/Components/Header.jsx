@@ -5,6 +5,8 @@ import logoBranco from "../img/logoBranco.svg";
 import login from "../img/login.svg";
 
 const Header = () => {
+  const [loginModal, setLoginModal] = React.useState();
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -29,7 +31,7 @@ const Header = () => {
               <Link to="/contato">Contato</Link>
             </li>
             <li>
-              <Link to="/login">
+              <Link to="/register">
                 <img src={login} alt="" />
               </Link>
             </li>

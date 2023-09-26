@@ -51,6 +51,12 @@ app.post("/admin", (req, res) => {
   connection.query(query);
 });
 
+app.post("/register", (req, res) => {
+  let query = req.body.sql;
+  console.log(query);
+  connection.query(query);
+});
+
 const port = process.env.PORT || 5000;
 app.listen(port);
 
