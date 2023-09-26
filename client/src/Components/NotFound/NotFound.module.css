@@ -1,0 +1,20 @@
+.notFound {
+  display: grid;
+  margin-bottom: 120px;
+}
+
+.notFound h1 {
+  font-size: 200px;
+}
+
+.notFound img {
+  transform: rotate(15deg);
+  margin: 60px 0;
+}
+
+.notFound p {
+  text-align: end;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}

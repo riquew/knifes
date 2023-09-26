@@ -10,6 +10,7 @@ import Personalizar from "./Components/Personalizar/Personalizar";
 import Contato from "./Components/Contato/Contato";
 import Login from "./Components/Login/Login";
 import Admin from "./Components/Admin/Admin";
+import NotFound from "./Components/NotFound/NotFound";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/contato" element={<Contato />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
