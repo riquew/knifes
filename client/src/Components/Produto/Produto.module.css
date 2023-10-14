@@ -39,6 +39,95 @@
   width: 100%;
 }
 
+.precoPix {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.frete {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 10px;
+}
+
+.frete label {
+  margin-right: 20px;
+}
+
+.frete label,
+.frete input {
+  font-size: 16px;
+  display: block;
+}
+
+.frete input {
+  border: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #fff;
+}
+
+.botaoFrete {
+  font-size: 15px;
+  padding: 12px 20px;
+  margin: 0;
+  border-radius: 0 4px 4px 0;
+  /* border-radius: 4px; */
+  background-color: #dedede;
+  cursor: pointer;
+  transition: 0.3s all;
+  border-left: none;
+  font-weight: bold;
+}
+
+.botaoFrete:hover {
+  background-color: black;
+  color: white;
+  outline: 1px solid #ccc;
+}
+
+.cotacaoFrete {
+  background-color: #fff;
+  display: grid;
+  padding: 12px 20px;
+  border-radius: 0 0 80px 0;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.cotacaoFrete div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cotacaoFrete p {
+  color: #000;
+  font-size: 14px;
+}
+
+.precoFrete {
+  text-align: end;
+}
+
+.freteDecorador {
+  height: 1px;
+  background-color: #595959;
+  border-radius: 1px;
+  margin: 10px 0;
+}
+
+.descricao {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  border-radius: 0 0 80px 0;
+}
+
 .cardDecorador {
   height: 1px;
   background-color: #595959;

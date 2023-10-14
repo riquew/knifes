@@ -3,7 +3,7 @@ import styles from "./ProdutoCard.module.css";
 
 const ProdutoCard = ({ id, nome, imagem, quantidade, preco, descricao }) => {
   function editaPreco(preco) {
-    const precoEditado = preco.toFixed(2).toString().replace(".", ",");
+    const precoEditado = preco.toFixed(2).replace(".", ",");
     return precoEditado;
   }
 
@@ -24,7 +24,6 @@ const ProdutoCard = ({ id, nome, imagem, quantidade, preco, descricao }) => {
         <p className={styles.precoParcelado}>
           ou R$ {precoEditado} em 10x R$ {precoParcelado}
         </p>
-        {/* <button className={styles.botaoComprar}>COMPRAR</button> */}
       </div>
     </div>
   );
