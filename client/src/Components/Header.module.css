@@ -38,3 +38,8 @@
 .nav ul li a {
   padding: 16px 0;
 }
+
+.iconeLogin {
+  cursor: pointer;
+  position: relative;
+}

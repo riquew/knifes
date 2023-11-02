@@ -3,9 +3,14 @@ import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 import logoBranco from "../img/logoBranco.svg";
 import login from "../img/login.svg";
+import LoginModal from "./LoginModal/LoginModal";
 
 const Header = () => {
-  const [loginModal, setLoginModal] = React.useState();
+  const [loginModal, setLoginModal] = React.useState(false);
+
+  function handleClickModal() {
+    setLoginModal(!loginModal);
+  }
 
   return (
     <div className={styles.container}>
@@ -30,10 +35,9 @@ const Header = () => {
             <li>
               <Link to="/contato">Contato</Link>
             </li>
-            <li>
-              <Link to="/register">
-                <img src={login} alt="" />
-              </Link>
+            <li className={styles.iconeLogin}>
+              <img src={login} alt="" onClick={handleClickModal} />
+              {loginModal ? <LoginModal /> : <p></p>}
             </li>
           </ul>
         </nav>

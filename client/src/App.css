@@ -120,6 +120,7 @@ h1 {
   font-size: 18px;
   transition: 0.3s all;
   letter-spacing: 0.0625em;
+  cursor: pointer;
 }
 
 .botaoAcao:hover {

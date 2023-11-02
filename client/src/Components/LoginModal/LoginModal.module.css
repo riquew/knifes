@@ -1,0 +1,58 @@
+.loginModal {
+  z-index: 999;
+  position: absolute;
+  background-color: #111;
+  margin-top: 20px;
+  padding: 20px 10px 0 10px;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #fff;
+  border-top: none;
+  left: -200px;
+  width: 300px;
+  min-width: 300px;
+}
+
+.formLogin {
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.formLogin label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.formLogin input {
+  padding: 6px 10px;
+}
+
+.botaoEntrar {
+  font-size: 15px;
+  padding: 12px 20px;
+  margin: 0;
+  background-color: #dedede;
+  cursor: pointer;
+  transition: 0.3s all;
+  border-left: none;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.botaoEntrar:hover {
+  background-color: black;
+  color: white;
+  outline: 1px solid #ccc;
+}
+
+.cardDecorador {
+  height: 1px;
+  background-color: #595959;
+  border-radius: 2px;
+  margin: 20px 0;
+}
+
+.loginModal span {
+  font-weight: bold;
+  text-decoration: underline;
+}

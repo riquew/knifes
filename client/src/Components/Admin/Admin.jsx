@@ -11,7 +11,6 @@ const Admin = () => {
     descricao: "",
   });
 
-  const [loading, setLoading] = React.useState(false);
   const [textoButton, setTextoButton] = React.useState("Enviar");
 
   function makeQuery() {

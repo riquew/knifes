@@ -50,7 +50,6 @@ const Produto = () => {
 
   return (
     <div className="container">
-      {console.log(info)}
       {loading && <span>Carregando...</span>}
       {!loading && info && (
         <>
