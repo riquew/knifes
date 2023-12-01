@@ -24,7 +24,7 @@ const Register = () => {
     const query = {
       sql: `INSERT INTO CLIENTE (NOME, EMAIL, SENHA, CEP, LOGRADOURO, NUMERO, CIDADE, ESTADO) VALUES ("${
         form.nome
-      }", "${form.email}", ${+form.senha}, ${+form.cep}, "${
+      }", "${form.email}", ${+form.senha}, ${form.cep}, "${
         form.logradouro
       }", "${form.numero}", "${form.cidade}", 
       "${form.estado}")`,
@@ -45,7 +45,7 @@ const Register = () => {
       estado: "",
     });
     const sql = makeQuery();
-    Api.post("admin", sql).then((response) => console.log(response.status));
+    Api.post("register", sql).then((response) => console.log(response.status));
     setTextoButton("Registrado.");
     navigate("/");
   }

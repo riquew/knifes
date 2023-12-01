@@ -17,8 +17,6 @@ const Produtos = () => {
     getProdutos();
   }, []);
 
-  console.log(loading);
-
   return (
     <div className="container ">
       <h1 className="titulo-container">Nossos Produtos</h1>

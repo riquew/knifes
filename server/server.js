@@ -15,6 +15,17 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.post("/", (req, res) => {
+  let query = req.body.sql;
+  console.log(query);
+  connection.query(query, function (error, result, fields) {
+    if (error) throw error;
+    const data = Object.values(result);
+    console.log(data)
+    res.json(data);
+  });
+});
+
 app.get("/produtos", (req, res) => {
   connection.connect(function (error) {
     if (error) throw error;

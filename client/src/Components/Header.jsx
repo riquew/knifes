@@ -10,6 +10,12 @@ const Header = () => {
 
   function handleClickModal() {
     setLoginModal(!loginModal);
+    document.addEventListener("click", handleClickOutside);
+  }
+
+  function handleClickOutside(event) {
+    if (event.target.dataset.form !== "form") setLoginModal(false);
+    document.removeEventListener("click", handleClickModal);
   }
 
   return (
@@ -35,8 +41,13 @@ const Header = () => {
             <li>
               <Link to="/contato">Contato</Link>
             </li>
-            <li className={styles.iconeLogin}>
-              <img src={login} alt="" onClick={handleClickModal} />
+            <li className={styles.iconeLogin} data-form="form">
+              <img
+                src={login}
+                alt=""
+                onClick={handleClickModal}
+                data-form="form"
+              />
               {loginModal ? <LoginModal /> : <p></p>}
             </li>
           </ul>
