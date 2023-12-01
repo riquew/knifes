@@ -1,4 +1,5 @@
 import React from "react";
+import Funcionamento from "./Funcionamento/Funcionamento";
 import styles from "./Footer.module.css";
 import logoMadeira from "../img/logoMadeira.png";
 import instagram from "../img/instagram.svg";
@@ -16,6 +17,9 @@ const Footer = () => {
             <li>domfacone@gmail.com</li>
             <li>Rua Barao Rio Preto, 813</li>
             <li>Jundiai - SP</li>
+            <li>
+              <Funcionamento />
+            </li>
           </ul>
           <ul className={styles.socialMedias}>
             <li>
